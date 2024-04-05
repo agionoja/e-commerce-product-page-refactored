@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white;
+}
+
+@layer components {
+  .box {
+    @apply mx-auto min-w-75 max-w-full items-center  bg-white px-4 leading-loose md:px-32;
+  }
+  .nav {
+    @apply relative flex w-full items-center justify-between gap-3;
+  }
+  .nav-ul {
+    @apply absolute top-0 flex w-4/5 flex-col gap-5  bg-white pt-20 text-lg font-bold text-neutral__black-lightbox transition duration-500 md:static  md:w-full md:flex-row md:items-center md:gap-10  md:pt-0  md:font-normal md:text-neutral__dark-grayish-blue;
+  }
+  .nav-ul__hide {
+    @apply -translate-y-[22rem] md:translate-y-0;
+  }
+  .nav-ul__show {
+    @apply -translate-y-0;
+  }
+}
