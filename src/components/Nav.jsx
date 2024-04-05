@@ -1,10 +1,10 @@
+import { useState } from "react";
+import PropTypes from "prop-types";
 import avatarImg from "../assets/images/image-avatar.png";
 import cartImg from "../assets/images/icon-cart.svg";
 import menuImg from "../assets/images/icon-menu.svg";
 import closeImg from "../assets/images/icon-close.svg";
 import logoImg from "../assets/images/logo.svg";
-import { useState } from "react";
-import PropTypes from "prop-types";
 
 Nav.propTypes = {
   children: PropTypes.any.isRequired,
@@ -12,7 +12,7 @@ Nav.propTypes = {
 export default function Nav({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className={"nav"}>
+    <nav className={"nav relative"}>
       <div className={"flex items-center gap-16"}>
         <div
           className={"flex items-center gap-4"}
@@ -33,7 +33,6 @@ export default function Nav({ children }) {
             alt="Sneaker Logo"
           />
         </div>
-
         <ul
           className={`nav-ul ${isOpen ? "nav-ul__show" : "nav-ul__hide"}`}
         >
@@ -54,7 +53,8 @@ export default function Nav({ children }) {
           </li>
         </ul>
       </div>
-      <div className={"flex gap-5"}>
+      {children}
+      <div className={"flex gap-5 md:mr-16"}>
         <button className={"w-8"}>
           <img
             className={"object-contain"}

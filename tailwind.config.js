@@ -28,6 +28,7 @@ export default {
         360: "90rem",
         93.75: "23.4375rem",
         91.75: "22.9375rem",
+        88: "22rem",
       },
       maxWidth: {
         360: "90rem",
